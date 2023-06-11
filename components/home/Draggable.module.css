@@ -1,0 +1,11 @@
+.Draggable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    cursor:pointer;
+}
+
+.moving a {
+    pointer-events: none;
+}

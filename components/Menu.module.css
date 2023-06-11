@@ -1,0 +1,74 @@
+.Menu {
+    --menu-width: calc(calc(100vw - 70px) / 3);
+    --menu-item: calc(calc(var(--menu-width) - 20px) / 3);
+    --menu-height: 50px;
+    z-index: 5000;
+}
+
+.Menu {
+    position:fixed;
+    top: 20px;
+    left: 20px;
+    height: var(--menu-height);
+    /* 100vw - margins / 3 */
+    width: var(--menu-width);
+    min-width: 405px;
+    color:black;
+    display: flex;
+    flex-direction: row;
+}
+
+.Menu div {
+    border-radius: 8px;
+    height: 50px;
+    
+    background-color: white;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    font-size: 22px;
+    font-weight:800;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sobo {
+    width: var(--menu-item);
+    min-width: 130px;
+}
+
+.switch {
+    width: calc(var(--menu-item) * 2);
+    margin-left: 15px;
+    position: relative;
+    min-width: 260px;
+}
+
+.switch p {
+    width: 50%;
+    min-width: 130px;
+    height: var(--menu-height);
+    z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.5s;
+}
+
+.movable {
+    display: block;
+    width: 50%;
+    height: var(--menu-height);
+    position: absolute;
+    background-color: black;
+    border-radius: 8px;
+    left:0;
+    right: 100%;
+    transition: all 0.5s;
+}
+
+
+
+

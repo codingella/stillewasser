@@ -1,0 +1,56 @@
+.Thumbnail {
+    --image-size: 150px;
+    --ratio: 0.7; /* 5:7*/
+    --folder-size: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgContainer {
+    /* composes: Draggable, otherClass; include other class names in dom 
+        composes: heading from './index.css'; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow:hidden;
+    }
+    
+    .imgContainer img {
+        width: 100%;
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .folder .imgContainer{
+        width: var(--folder-size);
+    }
+
+    .Thumbnail p {
+        text-align: center;
+        margin-top: 4px;
+        font-size: 14px;
+    
+        -webkit-user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .folder p {
+        margin-top: -5px;
+    }
+    
+    .vertical {
+        width: calc(var(--image-size) * var(--ratio));
+        height: var(--image-size);
+    }
+    
+    .horizontal{
+        height: calc(var(--image-size) * var(--ratio));
+        width: var(--image-size);
+    }
