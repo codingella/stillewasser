@@ -1,0 +1,247 @@
+.Page {
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    line-height: 1.3;
+    position: absolute;
+}
+
+.header {
+    font-size: 35px;
+    position: fixed;
+    top: 17px;
+    left: 20px;
+    text-transform: uppercase;
+}
+
+.subheader {
+    font-size:  18px;
+    position: fixed;
+    left: 280px;
+    top: 34px;
+}
+
+.support, .closeSupport {
+    font-size:  20px;
+    position: fixed;
+    right: 20px;
+    top: 27px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: width 1s ease;
+    white-space: nowrap;
+}
+
+.closeSupport {
+    right: 270px
+
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+
+    position: fixed;
+    top: 30vh;
+    left: 20px;
+}
+
+.selected {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+.header, .subheader, .support, .navigation, .closeSupport {
+    z-index: 100;
+    cursor: pointer;
+    text-shadow: 0px 0px 1px rgb(255, 16, 12);
+}
+
+
+.slides, .slide {
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.next, .prev {
+    width: 50vw;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev {
+    left: 0;
+}
+
+.imgContainer {
+    opacity: 0.9;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+
+.activeImage, .nextImage {
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activeImage img, .nextImage img {
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.blurer {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+}
+
+.title {
+    position: absolute;
+    top: -50px;
+    font-size: 30px;
+    color: rgb(255, 16, 12);
+}
+
+.text {
+    max-width: calc(100vw - 500px);
+    width: 50vw;
+    min-width: 400px;
+    position: fixed;
+    top: 30vh;
+    left: 280px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 0px 0px 2px #FFFFFF;
+}
+
+.text h1 {
+    font-size: 25px;
+    color:rgb(255, 16, 12);
+    text-shadow: 0px 0px 1px rgb(255, 16, 12);
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.text h1 em{
+    font-weight: 600;
+    font-style: normal;
+}
+
+.smallText {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+.pager {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: auto;
+    color: rgb(255, 16, 12);
+}
+
+.crew1, .crew2, .crew3 {
+    width: 200px;
+    position: absolute;
+    top: 250px;
+    
+}
+
+.crew1 {
+    left: -10px;
+}
+
+.crew2 {
+    left: 200px;
+}
+
+.crew3 {
+    left: 410px;
+}
+
+
+.title, .pager {
+    text-shadow: 0px 0px 1px rgb(255, 16, 12);
+}
+
+.supportWindow {
+    width: 350px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    z-index: 20;
+    top: 0;
+    right: -350px;
+    padding: 70px 20px 0 20px;
+    transition: right 1s ease;
+  /*  background-color: rgba(255, 255, 255, 0.2);
+   backdrop-filter: blur(30px);*/
+}
+
+.supportWindow.visible {
+    right: 0;
+}
+
+.supportScroll::-webkit-scrollbar {
+    display: none;
+}
+
+.supportScroll {
+    overflow-y: scroll;
+    position: relative;
+   width: 100%;
+    height: 100%;
+    padding-bottom: 70px;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.supportInner {
+    font-size: 15px;
+}
+
+.supportInner h2 {
+    margin: 20px 0 10px 0;
+    font-size: 17px;
+}
+
+.emphazize {
+    font-weight: bold;
+}
+
+
+@media all and (max-width: 500px) {
+    .index {
+        right: 10px;
+    }
+
+    .yearInfo {
+        left: 10px;
+    }
+}
+

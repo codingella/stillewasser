@@ -1,11 +1,39 @@
-@import url("https://use.typekit.net/cbz6hwy.css");
+@font-face {
+  font-family: 'Circa';
+  src: url('font/Cirka-Regular.woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circa';
+  src: url('font/Cirka-Bold.woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circa';
+  src: url('font/Cirka-Light.woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap');
+
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Neue Haas Unica', Helvetica Neue, Roboto, sans-serif;
-  font-weight: 500;
+ /* font-family: 'Circa', Arial, serif;*/
+ font-family: 'Xanh Mono', monospace;
+  font-weight: 400;
+  color: rgb(255, 16, 12);
+  letter-spacing: -0.02em;
+
+  background-color: black;
 }
 
 a {
@@ -23,7 +51,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
+    color: rgb(255, 16, 12);
     background: black;
   }
 }
