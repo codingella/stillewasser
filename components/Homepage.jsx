@@ -104,7 +104,7 @@ const Homepage = () => {
             {/*Slide 0: Intro 1*/}
                 <Slide slide={0} title={'Intro'} pager={'1/3'} activeSlide={activeSlide}>
                     <span>
-                    {'"Stille Wasser" ist ein Kurzfilm, über zwei junge Frauen in Sinnkrise. Mit einer Mischung aus Humor und subtilem Zynismus erkundet der Film die Wahrnehmung von schmerzhaften Erinnerungen und die Suche nach Heilung. Der Film möchte das Bewusstsein für mentale Gesundheit, die Bedeutung der Selbstannahme und Selbstreflexion stärken.'}
+                    {'"Stille Wasser" [Arbeitstitel] ist ein Kurzfilm, über zwei junge Frauen in Sinnkrise. Mit einer Mischung aus Humor und subtilem Zynismus erkundet der Film die Wahrnehmung von schmerzhaften Erinnerungen und die Suche nach Heilung. Der Film möchte das Bewusstsein für mentale Gesundheit, die Bedeutung der Selbstannahme und Selbstreflexion stärken.'}
                     </span>
                 </Slide>
 
@@ -118,7 +118,7 @@ const Homepage = () => {
                 <Slide slide={2} title={'Intro'} pager={'3/3'}activeSlide={activeSlide}>
                     <span>
                    <p> 
-                    {'Wenn die eigene Lebensgestaltung zur Sinnkrise wird, bleiben auch mentale Verstimmungen und destruktive Verhaltensweisen nicht fern. Auch mir ist es vor einiger Zeit so ergangen, auf diesem Weg waren tiefgehende Beziehungen und platonische Liebe wegweisend."Stille Wasser" möchte durch die Porträtierung einer tiefen Verbundenheit in all ihren Facetten einen zärtlichen Blick auf platonische Liebe und die Psyche junger Frauen werfen. Denn besonders in Zeiten mentaler Herausforderung sind es oft unsere engsten Vertrauten, die uns einfühlsamer und wahrheitsgetreuer wahrnehmen als wir selbst.'} 
+                    {'Wenn die eigene Lebensgestaltung zur Sinnkrise wird, bleiben auch mentale Verstimmungen und destruktive Verhaltensweisen nicht fern. Auch mir ist es vor einiger Zeit so ergangen, auf diesem Weg waren tiefgehende Beziehungen und platonische Liebe wegweisend."Stille Wasser" [Arbeitstitel] möchte durch die Porträtierung einer tiefen Verbundenheit in all ihren Facetten einen zärtlichen Blick auf platonische Liebe und die Psyche junger Frauen werfen. Denn besonders in Zeiten mentaler Herausforderung sind es oft unsere engsten Vertrauten, die uns einfühlsamer und wahrheitsgetreuer wahrnehmen als wir selbst.'} 
                     </p>
                     </span>
                 </Slide>
@@ -141,7 +141,7 @@ const Homepage = () => {
 
                 <Slide slide={5} title={'Crew'} pager={'1/4'} activeSlide={activeSlide}>
                     <span>
-                    <h1><em>{'Producer, Writer & Director /'}</em>{'Renée Klöffer'}</h1>
+                    <h1><em>{'Producer, Writer & Director /'}</em><br/>{'Renée Klöffer'}</h1>
                     <p>
                    {' Designerin & angehende Filmemacherin. Dabei konzentriert sie sich stark auf konzeptionelles und tiefgründiges Storytelling mit dem Fokus auf psychologische & philosophische Fragen, Feminismus & Frausein in der Gesellschaft.'}
                     </p>
@@ -151,7 +151,7 @@ const Homepage = () => {
 
                 <Slide slide={6} title={'Crew'} pager={'2/4'} activeSlide={activeSlide}>
                     <span>
-                    <h1><em>{'Producer /'}</em>{'Moritz Michl'}</h1>
+                    <h1><em>{'Producer /'}</em><br/>{'Moritz Michl'}</h1>
                     <p>
                     {'Producer & Regisseur, hat vor einiger Zeit seine Rolle als DoP verlassen. Nun konzentriert er sich darauf, Geschichten auf spielerisch-charmante Weise zu erzählen. Dennoch ist die visuelle Komponente für ihn immer noch ein Schlüsselfaktor.'}
                     </p>
@@ -199,44 +199,56 @@ const Homepage = () => {
                 <div className={style.supportScroll}>
                 <div className={style.supportInner}>
                     <p>
-                    {'Leider kann sich so ein Abschluss & Herzensprojekt, wie dieses sich nicht gänzlich ohne fremde Hilfe finanzieren. Wir sind für jede Art & Form von Unterstützung ob groß oder klein, herzlichst dankbar!! Das Spenden-Ziel sind 1000€. Jeder Cent fließt in Equipment, Reisekosten, Ausstattung & Verpflegung. Im Falle des Überschreitens unseres Zieles wollen wir den Rest in die zusätzliche Postproduktion und Festivalauswertung setzen, um dem Projekt auch ein bestmögliches Publikum geben zu können.'}
-                    </p>
+                    Leider kann sich so ein Abschluss & Herzensprojekt, wie dieses sich nicht gänzlich ohne fremde Hilfe finanzieren. Wir sind für jede Art & Form von Unterstützung ob groß oder klein, herzlichst dankbar!! 
+                   </p>
+                   <p>
+                   Das Spenden-Ziel sind 1000€ - 1400€. Jeder Cent fließt in Equipment, Reisekosten, Ausstattung & Verpflegung. 
+                   Falls wir das Mindest-Ziel der 1000€ überschreiten wollen wir den Rest in die zusätzliche Postproduktion und Festivalauswertung setzen, 
+                   um dem Projekt auch ein bestmögliches Publikum geben zu können. Die Spendenaktion ist bis zum 10.07.2023 offen. 
+                   </p>
                     <br/>
                     {'Freie Spenden sind natürlich möglich. Doch als Dank für Eure Spendenbeiträge haben wir uns auch diverse Goodies überlegt:'}
                     <br/>
-                    <h2>{'Artprint 15-20€'}</h2>
-                    <p>
-                   {' Ein Art-Film-Print vom Dreh. A4 schwarz/weiß nachhaltiger Risodruck auf Designpapier. Versandadresse bitte im Verwendungszweck angeben. Der Versand erfolgt ab Oktober.'}
-                    </p>
-                    <h2>{'Fabric 30-40€'}</h2>
-                    <p>
-                   {' Ein T-Shirt oder Geschirrtuch mit dem Kurzfilm Design & Name im Abspann unter DANKE! Screen Print auf 100% Baumwolle.'}<br/>
-                    {'Bitte gebt im Verwendungszweck an, ob ihr ein Geschirrtuch oder ein T-Shirt (Größen: M/L/XL) wünscht & die Adresse für den Versand. Der Versand erfolgt ab Mitte Oktober.'}
-                    </p>
-                    <h2>{'Super Supportis 50-500€'}</h2>
-                    <p>
-                   {'Supporter Bundle: Zugang zum Film vor der Premiere, Behind-The-Scenes-Bilder, Geschirrhandtuch, Name im Abspann unter SUPPORT & A3 Filmplakat.'}
+                    <a href={'https://www.paypal.com/pools/c/8V28DPsZkv'}>
+                        <h2>{'Artprint 15-20€'}</h2>
+                        <p>
+                        {'Ein Art-Film-Print vom Dreh. A4 schwarz/weiß nachhaltiger Risodruck auf Designpapier. Versandadresse bitte im Verwendungszweck angeben. Der Versand erfolgt ab Oktober.'}
+                        </p>
+                    </a>
+                    <a href={'https://www.paypal.com/pools/c/8V28DPsZkv'}>
+                        <h2>{'Fabric 30-40€'}</h2>
+                        <p>
+                        {'Ein T-Shirt oder Geschirrtuch mit dem Kurzfilm Design & Name im Abspann unter DANKE! Screen Print auf 100% Baumwolle.'}<br/>
+                        {'Bitte gebt im Verwendungszweck an, ob ihr ein Geschirrtuch oder ein T-Shirt (Größen: M/L/XL) wünscht & die Adresse für den Versand. Der Versand erfolgt ab Mitte Oktober.'}
+                        </p>
+                    </a>
+
+                    <a href={'https://www.paypal.com/pools/c/8V28DPsZkv'}>
+                        <h2>{'Super Supportis 50-500€'}</h2>
+                        <p>
+                        {'Supporter Bundle: Zugang zum Film vor Premiere, Behind the scenes Bilder, Geschirrhandtuch, Name im Abspann unter SUPPORT & A3 Filmplakat.'}
+                        <br/>
+                        {'Bitte gebt im Verwendungszweck an, ob ihr ein Geschirrtuch oder ein T-Shirt (Größen: M/L/XL) wünscht & die Adresse für den Versand. Der Versand erfolgt ab Mitte Oktober.'}
+                        </p>
+                    </a>
                     <br/>
-                    {'Bitte gebt im Verwendungszweck an, ob ihr ein Geschirrtuch oder ein T-Shirt (Größen: M/L/XL) wünscht & die Adresse für den Versand. Der Versand erfolgt ab Mitte Oktober.'}
-
-                    </p>
                     <br/>
-                    <p>
-                   {' Spenden sind per Paypal oder Überweisung möglich.'}
-                    <br/><br/>
-
-                    {'IBAN:'}<br/>
-                    {'Link/QR-Code'}
-
-                    </p><br/>
+                    <a href={'https://www.paypal.com/pools/c/8V28DPsZkv'} className={style.paypal}>
                     <p className={style.emphazize}>
-                   {'*Die Bilder dienen zur vorläufigen Visualisierung und stellen nicht das reale Endprodukt dar'}
+                   {'Hier geht es zu Paypal'}
+                    </p>
+                    </a>
+                    <br/><br/>
+                    <p >
+                   {'*Die Bilder dienen zur vorläufigen Visualisierung und stellen nicht das reale Endprodukt dar.'}
                     <br/><br/>
                    {'Uns ist bewusst, dass es vor allem in aktuellen Zeiten sehr schwierig ist, ein Budget zusammen zu bekommen, um alle Mitwirkenden fair bezahlen zu können, deswegen wollen wir nur ein bestimmtes Ziel erreichen, mit dem wir das Projekt mit den nötigsten Mitteln zur bestmöglichen Qualität realisieren können.'}
                     </p>
                     
                 </div>
+                
                 </div>
+                <div className={style.fader}></div>
             </div>
         </div>
     )
@@ -258,7 +270,7 @@ const Slide = ({title, pager, children, slide, activeSlide}) => {
                 
                     {children}
                 
-                <div className={style.pager}><p>{pager}</p><p>{'←  →'}</p></div>
+                <div className={style.pager}><p>{pager}</p></div>
             </div>
     </div>
 
