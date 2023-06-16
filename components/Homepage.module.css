@@ -28,8 +28,7 @@
     position: fixed;
     right: 20px;
     top: 27px;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
+   
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -37,9 +36,13 @@
     white-space: nowrap;
 }
 
-.closeSupport {
-    right: 270px
+.supportUnderline {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
 
+.support {
+    width: 220px;
 }
 
 .navigation {
@@ -48,8 +51,14 @@
     font-size: 22px;
 
     position: fixed;
-    top: 28vh;
+    top: 30vh;
     left: 20px;
+    width: 220px;
+}
+
+.support.active {
+    width: 310px;
+    transition: all 1s ease;
 }
 
 .selected {
@@ -128,6 +137,7 @@
     position: absolute;
     top: -50px;
     font-size: 30px;
+    
     color: rgb(255, 16, 12);
 }
 
@@ -136,7 +146,7 @@
     width: 50vw;
     min-width: 400px;
     position: fixed;
-    top: 28vh;
+    top: 30vh;
     left: 300px;
     color: white;
     font-size: 22px;
@@ -151,11 +161,12 @@
     text-shadow: 0px 0px 1px rgb(255, 16, 12);
     font-weight: 400;
     margin-bottom: 15px;
+    line-height: 1.2;
 }
 
 .text h1 em{
-    font-weight: 600;
-    font-style: normal;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .smallText {
@@ -176,20 +187,19 @@
 .crew1, .crew2, .crew3 {
     width: 200px;
     position: absolute;
-    top: 270px;
-    
+    top: 250px;  
 }
 
 .crew1 {
-    left: -10px;
+    left: 330px;
 }
 
 .crew2 {
-    left: 200px;
+    left: 100px;
 }
 
 .crew3 {
-    left: 410px;
+    left: 530px;
 }
 
 
@@ -242,6 +252,8 @@
 .emphazize {
     font-weight: bold;
     font-size: 20px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
 }
 
 .fader {
@@ -254,13 +266,286 @@
 
 }
 
-@media all and (max-width: 500px) {
-    .index {
-        right: 10px;
+.mobilePrev, .mobileNext {
+    display: none;
+}
+
+@media (hover: none) and (max-width: 1400px) {
+
+    .mobilePrev, .mobileNext {
+        display: block;
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        bottom: 5px;
+        z-index: 15;
     }
 
-    .yearInfo {
-        left: 10px;
+    .mobileNext {
+        right: 20px;
+    }
+
+    .mobilePrev {
+        left: 20px;
+    }
+
+    .mobilePrev img, .mobileNext img {
+        width: 100%;
     }
 }
+
+.storyMarked.selected {
+    text-decoration: none;
+}
+
+@media all and (max-width: 1200px) {
+
+    .subheader {
+        left: 280px;
+    }
+
+    .navigation, .support {
+        font-size: 20px;
+    }
+
+    .support {
+        width: 200px;
+    }
+
+    .text {
+        left: 280px;
+        font-size: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+
+    .mobilePrev, .mobileNext {
+        display: block;
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        bottom: 5px;
+    }
+
+    .mobileNext {
+        right: 20px;
+    }
+
+    .mobilePrev {
+        left: 20px;
+    }
+
+    .mobilePrev img, .mobileNext img {
+        width: 100%;
+    }
+
+
+    .crew1, .crew2, .crew3 {
+        width: 200px;
+        position: absolute;
+        top: 260px;  
+    }
+    
+    .crew1 {
+        left: 280px;
+    }
+    
+    .crew2 {
+        left: 100px;
+    }
+    
+    .crew3 {
+        left: 400px;
+    }
+}
+
+@media all and (max-width: 900px) {
+
+    .subheader {
+        display: none;
+    }
+
+    .navigation, .support {
+        font-size: 22px;
+    }
+
+    .support {
+        width: 220px;
+    }
+
+    .navigation {
+        top: 100px;
+        left:10vw;
+    }
+
+    .noneMobile {
+        display:none;
+    }
+
+    .storyMarked.selected {
+        text-decoration: underline;
+    }
+/*
+    .support, .support.active {
+        width: 100%;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+    }*/
+
+    .text {
+        left: 10vw;
+        width: 80vw;
+        max-width: none;
+        font-size: 22px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+
+    .mobilePrev, .mobileNext {
+        display: block;
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+    }
+
+    .mobileNext {
+        right: 10vw;
+    }
+
+    .mobilePrev {
+        left: 10vw;
+    }
+
+    .mobilePrev img, .mobileNext img {
+        width: 100%;
+    }
+
+    .support.active {
+        width: calc(50vw - 45px);
+    }
+
+    .supportWindow {
+        width: 50vw;
+        right: -50vw;
+    }
+    
+    .supportWindow.visible {
+        right: 0;
+    }
+
+    .crew1, .crew2, .crew3 {
+        top: 350px;  
+    }
+}
+
+@media all and (max-width: 700px) {
+
+    .header {
+        font-size: 30px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .navigation {
+        font-size: 18px;
+        left: auto;
+        top: 20px;
+        right: 30px;
+        width: auto;
+    }
+
+    .text {
+        font-size: 15px;
+        width: calc(100vw - 40px);
+        left: 20px;
+        top: 25vh;
+        min-width: unset;
+    }
+
+    .text h1, .title {
+        font-size: 21px;
+    }
+
+    .title {
+        top: -40px;
+        font-size: 23px;
+    }
+
+    .support {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 60vw;
+        left: 20vw;
+        top: calc(100% - 50px);
+        z-index: 120;
+    }
+
+    .mobileNext, .mobilePrev {
+        width: 20px;
+        height: 20px;
+        top: calc(100% - 45px);
+        bottom: auto;
+    }
+
+    .mobileNext {
+        right: 20px;
+    }
+
+    .mobilePrev {
+        left: 20px;
+    }
+
+    .crew1, .crew2, .crew3 {
+        width: 180px;
+        position: absolute;
+        top: 230px;  
+    }
+    
+    .crew1, .crew2, .crew3 {
+        left: auto;
+        right: 40px;
+    }
+
+
+
+    .supportWindow {
+        width: 100vw;
+        right: 0;
+        height: 100%;
+        top: 100%;
+        transition: top 0.7s ease;
+        z-index: 110;
+    }
+    
+    .supportWindow.visible {
+        right: 0;
+        top: 0;
+    }
+
+    .support.active {
+        top: 20px;
+        bottom: auto;
+        width: 60vw;
+        left: 20vw;
+        transition: top 0s linear 0.7s;
+    }
+
+    .supportUnderline {margin-right: 20px}
+
+}
+
 

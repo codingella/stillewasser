@@ -76,17 +76,19 @@ const Homepage = () => {
         <div className={style.Page}>
             <div className={style.header}>Stille Wasser</div>
             <div className={style.subheader}>a short film by Renée Marie Klöffer </div>
-            <div className={style.support} style={{width: supportVisible ? '310px' : '200px'}} onClick={() => setSupportVisible(!supportVisible)}>
-               <p>Projekt unterstützen</p> <p style={{display: supportVisible ? 'block' : 'none'}}>x</p> 
+            <div className={cx(style.support, supportVisible ? style.active : '')} onClick={() => setSupportVisible(!supportVisible)}>
+               <p className={style.supportUnderline}>Projekt unterstützen</p> <p style={{display: supportVisible ? 'block' : 'none', textDecoration: 'none'}}>x</p> 
             </div>
 
             <div className={style.navigation}>
                 <p className={ activeSlide < 3 ? style.selected : ''} onClick={() => setSlide(0)}>intro</p>
-                <p onClick={() => setSlide(3)}>story</p>
-                <p className={ activeSlide == 3 ? style.selected : ''} onClick={() => setSlide(3)}>{'_logline'}</p>
-                <p className={ activeSlide == 4 ? style.selected : ''} onClick={() => setSlide(4)}>{'_synopsis'}</p>
+                <p className={cx(style.storyMarked, activeSlide == 3 || activeSlide == 4 ? style.selected : '')} onClick={() => setSlide(3)}>story</p>
+                <p className={cx(style.noneMobile, activeSlide == 3 ? style.selected : '')} onClick={() => setSlide(3)}>{'_logline'}</p>
+                <p className={cx(style.noneMobile, activeSlide == 4 ? style.selected : '')} onClick={() => setSlide(4)}>{'_synopsis'}</p>
                 <p className={ activeSlide > 4 ? style.selected : ''} onClick={() => setSlide(5)}>crew</p>
             </div>
+            <div className={style.mobilePrev}><img src={'/images/prev.svg'}/></div>
+            <div className={style.mobileNext}><img src={'/images/next.svg'}/></div>
 
             <div className={style.imgContainer}>
                 <div className={style.activeImage}>
@@ -141,7 +143,7 @@ const Homepage = () => {
 
                 <Slide slide={5} title={'Crew'} pager={'1/4'} activeSlide={activeSlide}>
                     <span>
-                    <h1><em>{'Producer, Writer & Director /'}</em><br/>{'Renée Klöffer'}</h1>
+                    <h1>{'Renée Klöffer'}<br/><em>{'Producer, Writer & Director '}</em></h1>
                     <p>
                    {' Designerin & angehende Filmemacherin. Dabei konzentriert sie sich stark auf konzeptionelles und tiefgründiges Storytelling mit dem Fokus auf psychologische & philosophische Fragen, Feminismus & Frausein in der Gesellschaft.'}
                     </p>
@@ -151,7 +153,7 @@ const Homepage = () => {
 
                 <Slide slide={6} title={'Crew'} pager={'2/4'} activeSlide={activeSlide}>
                     <span>
-                    <h1><em>{'Producer /'}</em><br/>{'Moritz Michl'}</h1>
+                    <h1>{'Moritz Michl'}<br/><em>{'Producer'}</em></h1>
                     <p>
                     {'Producer & Regisseur, hat vor einiger Zeit seine Rolle als DoP verlassen. Nun konzentriert er sich darauf, Geschichten auf spielerisch-charmante Weise zu erzählen. Dennoch ist die visuelle Komponente für ihn immer noch ein Schlüsselfaktor.'}
                     </p>
@@ -161,8 +163,8 @@ const Homepage = () => {
 
                 <Slide slide={7} title={'Crew'} pager={'3/4'} activeSlide={activeSlide}>
                     <span>
-                    <h1><em>{'Directors of Photography'}</em> <br/>
-                    {'Henrike Thiel & Finn Fredeweß'}</h1>
+                    <h1>{'Henrike Thiel & Finn Fredeweß'}<br/><em>{'Directors of Photography'}</em> 
+                    </h1>
                     <p>
                     {'Das Kamera-Duo hat zusammen in Berlin Design studiert & arbeitet seither als eingespieltes Team zusammen an diversen Filmprojekten konzeptionell sowie visuell. Gemeinsam schaffen sie stimmungsvolle Bilder, die von starken Gefühlen getragen werden.'}
                     </p>
@@ -209,39 +211,48 @@ const Homepage = () => {
                     <br/>
                     {'Freie Spenden sind natürlich möglich. Doch als Dank für Eure Spendenbeiträge haben wir uns auch diverse Goodies überlegt:'}
                     <br/>
-                    <a href={'https://www.paypal.com/pools/c/8V28DPsZkv'}>
+                    <a href={'https://paypal.me/reneekloeffer?country.x=DE&locale.x=de_DE'}>
                         <h2>{'Artprint 15-20€'}</h2>
                         <p>
                         {'Ein Art-Film-Print vom Dreh. A4 schwarz/weiß nachhaltiger Risodruck auf Designpapier. Versandadresse bitte im Verwendungszweck angeben. Der Versand erfolgt ab Oktober.'}
                         </p>
                     </a>
-                    <a href={'https://www.paypal.com/pools/c/8V28DPsZkv'}>
+                    <a href={'https://paypal.me/reneekloeffer?country.x=DE&locale.x=de_DE'}>
                         <h2>{'Fabric 30-40€'}</h2>
                         <p>
-                        {'Ein T-Shirt oder Geschirrtuch mit dem Kurzfilm Design & Name im Abspann unter DANKE! Screen Print auf 100% Baumwolle.'}<br/>
-                        {'Bitte gebt im Verwendungszweck an, ob ihr ein Geschirrtuch oder ein T-Shirt (Größen: M/L/XL) wünscht & die Adresse für den Versand. Der Versand erfolgt ab Mitte Oktober.'}
+                        {'Geschirrtuch mit dem Kurzfilm Design & Name im Abspann unter DANKE!'}<br/>
+                        {'Screen Print auf 100% Baumwolle.'}<br/>
+                        {'Der Versand erfolgt ab Mitte Oktober.'}
                         </p>
                     </a>
 
-                    <a href={'https://www.paypal.com/pools/c/8V28DPsZkv'}>
+                    <a href={'https://paypal.me/reneekloeffer?country.x=DE&locale.x=de_DE'}>
                         <h2>{'Super Supportis 50-500€'}</h2>
                         <p>
                         {'Supporter Bundle: Zugang zum Film vor Premiere, Behind the scenes Bilder, Geschirrhandtuch, Name im Abspann unter SUPPORT & A3 Filmplakat.'}
                         <br/>
-                        {'Bitte gebt im Verwendungszweck an, ob ihr ein Geschirrtuch oder ein T-Shirt (Größen: M/L/XL) wünscht & die Adresse für den Versand. Der Versand erfolgt ab Mitte Oktober.'}
+                        {'Der Versand erfolgt ab Mitte Oktober.'}
                         </p>
                     </a>
                     <br/>
                     <br/>
-                    <a href={'https://www.paypal.com/pools/c/8V28DPsZkv'} className={style.paypal}>
+                    <a href={'https://paypal.me/reneekloeffer?country.x=DE&locale.x=de_DE'} className={style.paypal}>
                     <p className={style.emphazize}>
                    {'Hier geht es zu Paypal'}
                     </p>
                     </a>
-                    <br/><br/>
+                    <br/>
                     <p >
-                   {'*Die Bilder dienen zur vorläufigen Visualisierung und stellen nicht das reale Endprodukt dar.'}
-                    <br/><br/>
+                   {'Spendenbetrag / Goodie deiner Wahl an @reneekloeffer'}<br/>{'Bitte gib in der Nachricht deinen Kontakt (Name, Email) und Adresse für den Versand an.'}
+                   </p>
+                   <br/>
+                    <h2>{'Überweisung'}</h2>
+                    <p >
+                    Renee Klöffer<br/>
+                    IBAN DE13 7115 2680 0000 4985 68 <br/>
+                    Bitte gebt im Verwendungszweck einen Kontakt und Adresse für den Versand an. <br/><br/><br/>
+                    
+
                    {'Uns ist bewusst, dass es vor allem in aktuellen Zeiten sehr schwierig ist, ein Budget zusammen zu bekommen, um alle Mitwirkenden fair bezahlen zu können, deswegen wollen wir nur ein bestimmtes Ziel erreichen, mit dem wir das Projekt mit den nötigsten Mitteln zur bestmöglichen Qualität realisieren können.'}
                     </p>
                     
