@@ -112,7 +112,8 @@ const Homepage = () => {
 
                 <Slide slide={1} title={'Intro'} pager={'2/3'} activeSlide={activeSlide}>
                     <span>
-                   {'Eine leise Liebeserklärung an die Freund*innenschaft, die Suche, den Weg und alles, was dazwischen liegt. Verzweiflung und Orientierungslosigkeit haben mich fast schicksalhaft auf diesen Weg und zu diesem Filmprojekt geführt: Immer mehr junge Menschen zweifeln stark an ihrer Welt, den Systemen, die sie umgeben, und vor allem an sich selbst. Sich auf diesem holprigen Weg der Zwanziger an irgendeinem Punkt nicht selbst als das störende Problem im System wahrzunehmen und ein Stück weit zu verlieren - scheint fast unmöglich.'} 
+                    <p className={style.quote}>{'Eine leise Liebeserklärung an die Freund*innenschaft, die Suche, den Weg und alles, was dazwischen liegt.'}</p>
+                   {'Verzweiflung und Orientierungslosigkeit haben mich fast schicksalhaft auf diesen Weg und zu diesem Filmprojekt geführt: Immer mehr junge Menschen zweifeln stark an ihrer Welt, den Systemen, die sie umgeben, und vor allem an sich selbst. Sich auf diesem holprigen Weg der Zwanziger an irgendeinem Punkt nicht selbst als das störende Problem im System wahrzunehmen und ein Stück weit zu verlieren - scheint fast unmöglich.'} 
                     </span>
                 </Slide>
       
@@ -198,6 +199,7 @@ const Homepage = () => {
 
 
             <div className={cx(style.supportWindow, supportVisible ? style.visible : '')}>
+                
                 <div className={style.supportScroll}>
                 <div className={style.supportInner}>
                     <p>
@@ -260,6 +262,7 @@ const Homepage = () => {
                 
                 </div>
                 <div className={style.fader}></div>
+                <div className={cx(style.mobileSupport)} onClick={() => setSupportVisible(!supportVisible)}><p>Project unterstützen</p>  <p>x</p></div>
             </div>
         </div>
     )
